@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA</title>
+    <!-- Tailwind CSS for sleek styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0b0c10;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .animate-pulse-slow {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen flex flex-col justify-between items-center px-4 py-8 relative overflow-x-hidden">
+
+    <!-- Background Overlay for Premium Dark Feel -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-10 z-0" style="background-image: url('https://images.unsplash.com/photo-1540747737956-37872404797a?q=80&w=1000&auto=format&fit=crop');"></div>
+
+    <!-- Main Container -->
+    <div class="w-full max-w-md mx-auto text-center z-10 flex-grow flex flex-col justify-center items-center mt-8">
+        
+        <!-- Main Title / Brand Name -->
+        <h1 class="text-4xl md:text-5xl font-black tracking-wider text-yellow-400 uppercase mb-8 drop-shadow-md">
+            RSA
+        </h1>
+
+        <!-- Profile/Logo Area -->
+        <div class="relative w-40 h-40 mb-8 rounded-full p-1 bg-gradient-to-r from-cyan-500 to-red-500 shadow-xl overflow-hidden flex items-center justify-center">
+            <!-- Instructions for User: Replace 'image_0A3xog.png' with your actual image path -->
+            <img src="image_0A3xog.png" alt="RSA Logo" class="w-full h-full rounded-full object-cover bg-black" onerror="this.src='https://placehold.co/160x160/000000/ffffff?text=RSA';">
+        </div>
+
+        <!-- Live Countdown Timer -->
+        <p class="text-xl md:text-2xl font-bold mb-4 tracking-wide">
+            Join Now <span id="timer" class="text-yellow-400 font-extrabold text-3xl mx-1">21</span> Seconds Left
+        </p>
+
+        <!-- Accuracy Tag -->
+        <div class="inline-flex items-center gap-2 mb-6">
+            <span class="text-red-500 font-extrabold text-2xl tracking-tight uppercase">Top</span>
+            <span class="bg-gray-800 border border-gray-700 px-4 py-1.5 rounded text-sm font-semibold text-gray-300 tracking-wide">Accuracy</span>
+        </div>
+
+        <!-- Call to Action Subtext -->
+        <p class="text-gray-300 font-medium mb-4 flex items-center justify-center gap-1.5 text-sm md:text-base">
+            Join and Watch Upcoming Tip <span class="animate-bounce">👇</span>
+        </p>
+
+        <!-- Telegram Join Button -->
+        <a href="https://t.me/+_rJjtPHVBHs3YzY9" target="_blank" rel="noopener noreferrer" class="w-full bg-cyan-400 hover:bg-cyan-300 text-red-600 font-black text-lg md:text-xl py-4 px-6 rounded-xl shadow-lg shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-3 uppercase tracking-wider animate-pulse-slow">
+            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.24-5.54 3.65-.52.36-.99.53-1.41.52-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.41-1.39-.87.03-.24.37-.49 1.02-.74 3.99-1.73 6.65-2.88 7.99-3.44 3.8-1.6 4.59-1.88 5.11-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z"/>
+            </svg>
+            Join RSA Telegram Channel
+        </a>
+
+        <!-- Bottom Tagline -->
+        <div class="mt-8">
+            <p class="text-yellow-500 font-bold tracking-wide flex items-center justify-center gap-1.5 text-sm">
+                💰 RSA 💰
+            </p>
+            <p class="text-xs md:text-sm font-extrabold tracking-widest text-gray-400 uppercase mt-1">
+                CRICKET TIPPING KI DUNIYA KA RAJA 👑
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Legal Disclaimer for Ad Compliance (Meta Guidelines) -->
+    <footer class="w-full max-w-md mx-auto mt-12 pt-6 border-t border-gray-900 text-center z-10 text-[10px] text-gray-600 leading-relaxed px-2">
+        <p class="mb-2">Disclaimer: This channel is created strictly for entertainment and educational purposes based on sports analysis. We do not promote, support, or facilitate any form of illegal activities or online betting.</p>
+        <p>&copy; 2026 RSA. All rights reserved. This site is not a part of the Meta website or Meta Platforms, Inc.</p>
+    </footer>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        let timeLeft = 21;
+        const timerElement = document.getElementById('timer');
+        
+        const countdown = setInterval(() => {
+            timeLeft--;
+            if (timeLeft >= 0) {
+                timerElement.textContent = timeLeft;
+            } else {
+                // Restart timer to maintain urgency feel for new users
+                timeLeft = 21;
+                timerElement.textContent = timeLeft;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
